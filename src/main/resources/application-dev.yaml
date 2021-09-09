@@ -1,0 +1,27 @@
+server:
+  port: 8086
+
+
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  hbm2ddl:
+    auto: update
+
+spring:
+  jpa:
+    hibernate:
+      show-sql: true
+
+  policy:
+    datasource:
+      url: jdbc:postgresql://localhost:5433/amx_product_dev
+      username: postgres
+      password: cts
+  jdbc:
+    driverClassName: org.postgresql.Driver
+
+  product:
+    datasource:
+      url: jdbc:postgresql://localhost:5433/amx_product_tst
+      username: postgres
+      password: cts
